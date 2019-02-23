@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>QuizTime</title>
+  </head>
+  <body>
+        
+        <div class="container">  
+            <h1>Its Quiz Time!</h1> 
+            <div id='quizControls'>
+                <form id='form'>
+                    <label for='numberOfQuestions'>Number Of Questions (1-10)</label>
+                    <input type="number" name="numberOfQuestions" id="numberOfQuestions" min="1" max="10" required>
+                    <label for='difficulty'>Choose The Difficulty</label>
+                    <select id='difficulty' name='difficulty'>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="">Ready for Anything</option>
+                    </select>
+                    <label for='category'>Choose A Category</label>
+                    <select id='category' name='category'>
+                        <option value="23">Science and Nature</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Books</option>
+                        <option value="11">Film</option>
+                        <option value="12">Music</option>
+                        <option value="14">TV</option>
+                        <option value="">I'm Feeling Lucky</option>
+                    </select>
+                    <input type="submit" id="button" value="Generate Quiz">
+                </form>
+            </div>
+            <!--Empty container - Javascript appends the questions from an API call-->
+            <div class="questionContainer"></div>
+
+            <!--Winner screen - gives player option to try again-->
+            <div class="winner">
+                <h2>Well Done</h2>
+                <h3>Thanks for taking the quiz.  
+                    <br>Would you like to try again?
+                </h3>
+
+                <!-- Buttons to either replay or say goodbye -->
+                <button class="btn btn--yes" onclick="location.reload()">Yes Please</button>
+                <button class="btn btn--no" onclick="confirmClose()">Close</button>
+            </div>
+
+            <!-- Score div -->
+            <div class="score">
+                <!-- Empty spans for players current score and number of questions -->
+                <h2><span class='player'></span> Score: <span class="score--change"></span>/<span class="score--total"></span></h2>
+            </div>
+            
+        </div>
+    <!-- Inline JavaScript linking to app.js file -->
+    <script src='app.js'></script>
+  </body>
+</html>

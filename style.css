@@ -1,0 +1,104 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Indie Flower', cursive;
+    background-color: #33CACC;
+}
+
+/* Headings */
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+/* Body Container */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+
+/* Question divs and containers */
+.questionContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.question, .winner {
+    background-color: #FCFCFC;
+    width: 80%;
+    padding: 25px 50px;
+    border: 5px solid #F4E04D;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+}
+
+/* Answer boxes */
+.answer{
+    border: 2px solid #222;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.answer:hover {
+    border: 2px solid #999;
+    background-color: #CCE6F4;
+}
+
+/* Input form for choosing question categories and difficulty */
+form {
+    width: 300px;
+}
+input, textarea, select, button{
+    box-sizing: border-box;
+    color: #666;
+    font-family: 'Indie Flower', cursive;
+    background: #CCE6F4;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    display: block;
+    width: 100%;
+    border: 3px solid #F4E04D;
+    border-radius: 15px;
+    margin: 0 0 15px 0;
+    cursor: pointer;
+}
+
+label {
+    font-size: 1.3em;
+}
+
+input[type='submit']{
+    background-color: #66ff63;
+}
+
+
+/* buttons at end of the quiz */
+
+.btn--yes{
+    background-color: #66ff63;
+}
+
+.btn--no{
+    background-color: #ff6666;
+}
+
